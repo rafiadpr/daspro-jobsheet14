@@ -13,7 +13,6 @@ public class Percobaan2_23 {
         bilangan = sc.nextInt();
         System.out.print("Pangkat : ");
         pangkat = sc.nextInt();
-        System.out.println(hitungPangkat(bilangan, pangkat));
 
         System.out.print("Deret perhitungan: ");
         System.out.println(hitungPangkat(bilangan, pangkat) + " = " + hasilPerhitungan(bilangan, pangkat));
@@ -21,14 +20,19 @@ public class Percobaan2_23 {
 
     static int hitungPangkat(int x, int y) {
         if (y == 0) {
+            System.out.print("1 ");
             return (1);
         } else {
+            System.out.print(x + "x");
             return (x * hitungPangkat(x, y - 1));
         }
     }
 
     static int hasilPerhitungan(int x, int y) {
-        if (y == 0) return 1;
-        return x * hasilPerhitungan(x, y - 1);
+        if (y == 0) {
+            return 1;
+        } else {
+            return x * hasilPerhitungan(x, y - 1);
+        }
     }
 }
